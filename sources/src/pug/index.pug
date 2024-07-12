@@ -1,0 +1,132 @@
+extends base/_layout
+block vars
+    - var pageName = 'index'
+block head
+    title Three Units
+block page
+
+    -
+        const catalogList = [
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-1',
+                name: 'Строительные'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-2',
+                name: 'Технологические'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-3',
+                name: 'Нестандартные'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-4',
+                name: 'Рекламные'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-5',
+                name: 'Эстакады'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-6',
+                name: 'Опоры двойного назначения'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-7',
+                name: 'Производство сварной балки'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-8',
+                name: 'Прожекторные мачты и молниеотводы'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-9',
+                name: 'Дорожные'
+            },
+            {
+                imgSrc: 'block_catalog_art6/bg-picture-10',
+                name: 'Несущие'
+            },
+        ]
+    
+    .container
+
+        //- .block_catalog_art6
+
+            h2.block_catalog_art6__title Металлоконструкции
+
+            ul.block_catalog_art6__list
+
+                each item in catalogList
+
+                    li.block_catalog_art6__item
+                        a(href="#")
+                            +pictureSizeLazy(item.imgSrc,'jpg','x2',486,208)
+                            span= item.name
+
+
+        -
+            const proektData = [
+                {picNum1: 1, picNum2: 2, picNum3: 3},
+                {picNum1: 2, picNum2: 1, picNum3: 3},
+                {picNum1: 3, picNum2: 1, picNum3: 2},
+            ]
+
+
+
+        .block_proekt_art6
+            h2.block_proekt_art6__title Реализованные проекты
+
+            .block_proekt_art6__wrapper
+
+                each proekt in proektData
+
+                    .block_proekt_art6__item
+
+                        .block_proekt_art6__slider.swiper
+
+                            .block_proekt_art6__navigation
+                                button.block_proekt_art6__prev(button="button" aria-label="Показать предыдущий слайд")
+                                button.block_proekt_art6__next(button="button" aria-label="Показать следующий слайд")
+
+                            .swiper-wrapper
+                            
+                                .block_proekt_art6__slide.swiper-slide
+                                    +pictureSizeLazy('block_proekt_art6/project-' + proekt.picNum1,'jpg','x2',670,423)
+
+                                .block_proekt_art6__slide.swiper-slide
+                                    +pictureSizeLazy('block_proekt_art6/project-' + proekt.picNum2,'jpg','x2',670,423)
+
+                                .block_proekt_art6__slide.swiper-slide
+                                    +pictureSizeLazy('block_proekt_art6/project-' + proekt.picNum3,'jpg','x2',670,423)
+
+                        .block_proekt_art6__descr
+
+                            .block_proekt_art6__point 
+                                span.block_proekt_art6__name Заказчик: 
+                                span.block_proekt_art6__value ООО «СЭС»
+
+                            .block_proekt_art6__point 
+                                span.block_proekt_art6__name Объект: 
+                                span.block_proekt_art6__value магазин «Пятёрочка»
+
+                            .block_proekt_art6__point 
+                                span.block_proekt_art6__name Вес металлоконструкций: 
+                                span.block_proekt_art6__value 75 тонн
+
+                            .block_proekt_art6__point 
+                                span.block_proekt_art6__name Срок изготовления: 
+                                span.block_proekt_art6__value 14 дней
+
+                            .block_proekt_art6__point 
+                                span.block_proekt_art6__name Дополнительная информация: 
+                                span.block_proekt_art6__value доставка и монтаж выполнены сотрудниками ЗМК «ГрандМеталлСтрой»
+
+
+
+
+
+
+
+
+
