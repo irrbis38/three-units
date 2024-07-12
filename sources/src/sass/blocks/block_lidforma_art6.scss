@@ -1,0 +1,248 @@
+.block_lidforma_art6 {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    position: relative;
+    margin: 71px 0;
+    padding: 54px 0 55px 73px;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+
+    @include xl {
+        margin: 53px 0;
+    }
+
+    @include lg {
+        margin: 45px 0;
+        padding: 44px 0 44px 58px;
+    }
+
+    @include md {
+        margin: 40px 0;
+        padding: 34px 0 34px 46px;
+    }
+
+    @include xs {
+        margin: 47px 0;
+        padding: 29px 17px 42px;
+    }
+}
+
+.block_lidforma_art6__bg {
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0% 50%;
+
+        @include xs {
+            object-position: 20% 50%;
+        }
+    }
+}
+
+.block_lidforma_art6__wrapper {
+    max-width: 562px;
+
+    @include lg {
+        max-width: 450px;
+    }
+
+    @include md {
+        max-width: 360px;
+    }
+
+    @include xs {
+        max-width: 100%;
+    }
+}
+
+.block_lidforma_art6__title {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fdfdfd;
+
+    @include lg {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+
+    @include md {
+        font-size: 28px;
+    }
+
+    @include xs {
+        max-width: 350px;
+
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    @include r(370px) {
+        font-size: 20px;
+    }
+}
+
+.block_lidforma_art6__subtitle {
+    margin: 0 0 29px 0;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    color: #fdfdfd;
+
+    @include lg {
+        margin-bottom: 21px;
+        font-size: 24px;
+    }
+
+    @include sm {
+        margin-bottom: 17px;
+        font-size: 18px;
+        line-height: 104%;
+    }
+
+    @include xs {
+        margin-bottom: 29px;
+        line-height: 100%;
+    }
+}
+
+.block_lidforma_art6__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block_lidforma_art6__label {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fdfdfd;
+
+    @include lg {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    @include md {
+        line-height: 133%;
+    }
+
+    @include xs {
+        margin-bottom: 8px;
+        font-size: 15px;
+        line-height: 116%;
+    }
+}
+
+.block_lidforma_art6__input {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    margin-bottom: 14px;
+    padding: 0 20px;
+    appearance: none;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: transparent;
+
+    &,
+    &::placeholder {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 167%;
+        color: #fdfdfd;
+
+        @include lg {
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+        @include md {
+            line-height: 133%;
+        }
+
+        @include xs {
+            max-width: 350px;
+            font-size: 15px;
+            line-height: 116%;
+        }
+    }
+
+    &.error {
+        border-color: #e01f3d;
+
+        &::placeholder {
+            color: #e01f3d;
+        }
+    }
+
+    @include lg {
+        min-height: 35px;
+    }
+
+    @include md {
+        padding: 0 10px;
+    }
+
+    @include xs {
+        min-height: 42px;
+    }
+}
+
+.block_lidforma_art6__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    width: 283px;
+    height: 64px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    outline: none;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0045a3;
+    cursor: pointer;
+
+    @include lg {
+        width: 226px;
+        height: 51px;
+        margin-top: 26px;
+        font-size: 16px;
+    }
+
+    @include md {
+        width: 203px;
+        height: 46px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    @include xs {
+        width: 100%;
+        max-width: 350px;
+        height: 42px;
+        margin-top: 29px;
+    }
+}

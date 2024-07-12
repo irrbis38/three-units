@@ -48,10 +48,16 @@ block page
                 name: 'Несущие'
             },
         ]
+
+        const proektData = [
+            {picNum1: 1, picNum2: 2, picNum3: 3},
+            {picNum1: 2, picNum2: 1, picNum3: 3},
+            {picNum1: 3, picNum2: 1, picNum3: 2},
+        ]
     
     .container
 
-        //- .block_catalog_art6
+        .block_catalog_art6
 
             h2.block_catalog_art6__title Металлоконструкции
 
@@ -65,12 +71,7 @@ block page
                             span= item.name
 
 
-        -
-            const proektData = [
-                {picNum1: 1, picNum2: 2, picNum3: 3},
-                {picNum1: 2, picNum2: 1, picNum3: 3},
-                {picNum1: 3, picNum2: 1, picNum3: 2},
-            ]
+
 
 
 
@@ -86,8 +87,8 @@ block page
                         .block_proekt_art6__slider.swiper
 
                             .block_proekt_art6__navigation
-                                button.block_proekt_art6__prev(button="button" aria-label="Показать предыдущий слайд")
-                                button.block_proekt_art6__next(button="button" aria-label="Показать следующий слайд")
+                                button.block_proekt_art6__prev(type="button" aria-label="Показать предыдущий слайд")
+                                button.block_proekt_art6__next(type="button" aria-label="Показать следующий слайд")
 
                             .swiper-wrapper
                             
@@ -122,6 +123,28 @@ block page
                                 span.block_proekt_art6__name Дополнительная информация: 
                                 span.block_proekt_art6__value доставка и монтаж выполнены сотрудниками ЗМК «ГрандМеталлСтрой»
 
+
+        .block_lidforma_art6
+
+            .block_lidforma_art6__bg
+                +pictureSizeLazy('block_lidforma_art6/lidforma-bg','jpg','x2',1500,584)
+
+            .block_lidforma_art6__wrapper
+
+                h2.block_lidforma_art6__title Изготовим металлоконструкции дешевле конкурентов
+
+                p.block_lidforma_art6__subtitle Оставьте заявку на бесплатный расчет 
+
+
+                form.block_lidforma_art6__form(action="#" novalidate)
+
+                    label.block_lidforma_art6__label(for="lidforma-input-phone") Телефон
+                    input.block_lidforma_art6__input(type="text" placeholder="+7 (___)-___-__-__" id="lidforma-input-phone" data-maska="+7 (###) ###-##-##" required)
+
+                    label.block_lidforma_art6__label(for="lidforma-input-name") Имя
+                    input.block_lidforma_art6__input(type="text" id="lidforma-input-name")
+
+                    button.block_lidforma_art6__submit(type="submit" aria-label="Отправить запрос") Получить
 
 
 
